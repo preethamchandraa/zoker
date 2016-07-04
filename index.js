@@ -58,7 +58,54 @@ function sendTextMessage(sender, text) {
 }
 
 function sendGenericMessage(sender) {
-    let messageData = {"attachment":{"type":"template","payload":{"template_type":"generic","elements":[{"title":"Flat Rs.500 Off On Minimum Purchase Of On Rs.2000","image_url":"https://upload.wikimedia.org/wikipedia/en/2/2b/Logo_of_Jabong.png","subtitle":"This Coupon gives you Flat Rs.500 Off on Minimum Purchase OfRs.2000","buttons":{"type":"web_url","title":"ICICV500JG","url":"http://www.jabong.com/all-products/?promotion=additional-30"}},{"title":"Extra 10% OFF on Clothing \u0026 Footwear for Women (6PM-12PM)","image_url":"https://upload.wikimedia.org/wikipedia/en/2/2b/Logo_of_Jabong.png","subtitle":"This Coupon gives you Extra 10% OFF on Clothing \u0026 Footwear for Women (6PM-12PM)","buttons":{"type":"web_url","title":"EXTRA10","url":"http://www.jabong.com"}},{"title":"Flat 30% OFF on purchase of products worth Rs 1699","image_url":"https://upload.wikimedia.org/wikipedia/en/2/2b/Logo_of_Jabong.png","subtitle":"This Coupon gives you Flat 30% OFF on purchase of products worth Rs 1699","buttons":{"type":"web_url","title":"EXTRA30","url":"http://www.jabong.com"}},{"title":"Flat 20% OFF on purchase of products worth Rs 1699","image_url":"https://upload.wikimedia.org/wikipedia/en/2/2b/Logo_of_Jabong.png","subtitle":"This Coupon gives you Flat 20% OFF on purchase of products worth Rs 1699","buttons":{"type":"web_url","title":"ACC20","url":"http://www.jabong.com"}}]}}}
+    let messageData = {
+        "attachment": {
+		"type": "template",
+		"payload": {
+			"template_type": "generic",
+			"elements": [{
+				"title": "Flat Rs.500 Off On Minimum Purchase Of On Rs.2000",
+				"image_url": "https://upload.wikimedia.org/wikipedia/en/2/2b/Logo_of_Jabong.png",
+				"subtitle": "This Coupon gives you Flat Rs.500 Off on Minimum Purchase OfRs.2000",
+				"buttons": {
+					"type": "web_url",
+					"title": "ICICV500JG",
+					"url": "http://www.jabong.com/all-products/?promotion=additional-30"
+				}
+			},
+			{
+				"title": "Extra 10% OFF on Clothing \u0026 Footwear for Women (6PM-12PM)",
+				"image_url": "https://upload.wikimedia.org/wikipedia/en/2/2b/Logo_of_Jabong.png",
+				"subtitle": "This Coupon gives you Extra 10% OFF on Clothing \u0026 Footwear for Women (6PM-12PM)",
+				"buttons": {
+					"type": "web_url",
+					"title": "EXTRA10",
+					"url": "http://www.jabong.com"
+				}
+			},
+			{
+				"title": "Flat 30% OFF on purchase of products worth Rs 1699",
+				"image_url": "https://upload.wikimedia.org/wikipedia/en/2/2b/Logo_of_Jabong.png",
+				"subtitle": "This Coupon gives you Flat 30% OFF on purchase of products worth Rs 1699",
+				"buttons": {
+					"type": "web_url",
+					"title": "EXTRA30",
+					"url": "http://www.jabong.com"
+				}
+			},
+			{
+				"title": "Flat 20% OFF on purchase of products worth Rs 1699",
+				"image_url": "https://upload.wikimedia.org/wikipedia/en/2/2b/Logo_of_Jabong.png",
+				"subtitle": "This Coupon gives you Flat 20% OFF on purchase of products worth Rs 1699",
+				"buttons": {
+					"type": "web_url",
+					"title": "ACC20",
+					"url": "http://www.jabong.com"
+				}
+			}]
+		}
+		}
+    }
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
         qs: {access_token:token},
